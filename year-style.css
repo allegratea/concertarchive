@@ -1,0 +1,194 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative; /* Added context for absolute positioning */
+}
+
+/* Global Top Right Back Arrow Navigation */
+.nav-back-btn {
+    position: absolute;
+    top: 1.5rem;    /* Aligns cleanly with your grid container's padding */
+    right: 1.5rem;  /* Changed from left to right to move it to the top right corner */
+    z-index: 10;    /* Keeps the button safely layered above the container layout */
+    
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4b5563;
+    background-color: white;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Hover Action for the Back Button */
+.nav-back-btn:hover {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Parent Container */
+.page-container {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem; 
+    
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    grid-template-columns: 2fr 1fr; 
+    gap: 1.5rem; 
+}
+
+/* Generic styling for all boxes */
+.box {
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #64748b;
+    font-weight: bold;
+}
+
+/* Box One Configuration */
+.box-one {
+    grid-row: 1;
+    grid-column: 1;
+    width: 25vw; 
+    font-size: 2rem;
+    background-color: #1e3a8a;
+    color: white;
+    min-height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Box Two Configuration */
+.box-two {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    color: #333;
+    font-weight: normal;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+/* Timeline List Specific Styling */
+.list-title {
+    font-size: 1.75rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 0.5rem;
+}
+
+.timeline-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    border-left: 4px solid #3b82f6;
+}
+
+/* UPDATED: Added nowrap rule and adjusted width to handle long dates */
+.date {
+    font-weight: 700;
+    color: #1e3a8a;
+    white-space: nowrap; /* Forces text to stay on a single line */
+    min-width: fit-content; /* Lets the container grow to fit "November 10" perfectly */
+}
+
+.label {
+    font-weight: 500;
+    color: #4b5563;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
+
+/* Reusable VIP Class */
+.vip-star {
+    margin-left: auto; 
+    font-size: 1.25rem;
+    font-style: normal; 
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.1)); 
+}
+
+/* Group Link Styling */
+.group-link {
+    color: #4b5563;          
+    text-decoration: none;   
+    font-weight: 600;        
+    transition: color 0.2s ease; 
+}
+
+/* Hover & Focus States for Better Accessibility */
+.group-link:hover, 
+.group-link:focus {
+    color: #3b82f6;          
+    text-decoration: underline; 
+    outline: none;
+}
+
+/* Add this to the bottom of year-style.css */
+
+/* Greys out the entire item wrapper background and border accent */
+.timeline-item.upcoming-item {
+    background-color: #f1f5f9;
+    border-left-color: #94a3b8;
+}
+
+/* Formats the unclickable text style */
+.disabled-link {
+    color: #94a3b8;
+    font-weight: 600;
+    cursor: not-allowed;
+    user-select: none; /* Prevents text highlighting */
+}
+
+/* Adjusts the date element within upcoming items to match the grey scheme */
+.timeline-item.upcoming-item .date {
+    color: #64748b;
+}
+
+/* Reusable Upcoming Soon Class to mimic the VIP Star positioning */
+.soon-label {
+    margin-left: auto; 
+    font-size: 1.25rem;
+    font-style: normal; 
+    display: inline-flex;
+    align-items: center;
+    /* Applies a clean text shadow to give the emoji a crisp look */
+    filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.1)); 
+}
+
