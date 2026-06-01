@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allegra's Concert Archive</title>
+    <link rel="stylesheet" href="main-style.css">
+</head>
+<body>
+
+    <main class="dashboard-container">
+        
+        <section class="section-card left-column video-background-container">
+            
+            <div class="video-content">
+                <video autoplay loop muted playsinline class="bg-dashboard-video">
+                    <source src="videos/homepage-bg.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="welcome-label">
+                <span>Welcome!</span>
+            </div>
+        </section>
+
+        <div class="right-column">
+            
+            <section class="section-card search-box-container">
+                <div class="search-bar-wrapper">
+                    <input type="text" id="group-search" placeholder="Search bar for group...">
+                    <div id="search-results" class="search-results-dropdown" style="display: none;"></div>
+                </div>
+            </section>
+
+            <div class="bottom-split-row">
+                
+                <section class="section-card years-box">
+                    <div class="years-list">
+                        <a href="2022.html">2022</a><br>
+                        <a href="2023.html">2023</a><br>
+                        <a href="2024.html">2024</a><br>
+                        <a href="2025.html">2025</a><br>
+                        <a href="2026.html">2026</a>
+                    </div>
+                </section>
+
+                <section class="section-card test-box">
+                    <a href="svtland.html" class="svt-banner-link">
+                        <img src="images/seventeen-banner.jpg" alt="Go to SEVENTEEN Land" class="svt-banner-img">
+                    </a>
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="search-handler.js"></script>
+</body>
+</html>
