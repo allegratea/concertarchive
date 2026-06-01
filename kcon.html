@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCON Details Archive</title>
+    <link rel="stylesheet" href="group-style.css">
+</head>
+<body>
+
+    <a href="#" id="dynamic-back-btn" class="nav-back-btn">← Back</a>
+
+    <div class="page-container">
+        <div class="left-content-wrapper">
+            <div class="box box-three">KCON</div>
+
+            <div class="box box-two">
+                <p class="concert-text">
+                    Attending KCON was an absolutely unforgettable experience. The energy in the arena was electric from the moment the pre-show started, and the massive ocean of glowing lightsticks from so many different fandoms lighting up the crowd was breathtaking. Seeing a lineup of world-class K-pop artists deliver flawless synchronization, incredible live vocals, and charismatic stage presence exceeded every expectation. It was easily one of the best weekends ever, and getting VIP access for the convention panels, artist engagements, and pre-show soundchecks made every single second worth it!
+                </p>
+                
+                <div id="lineup-tags-wrapper" class="lineup-tags-row"></div>
+            </div>
+            
+            <div class="button-container">
+                <button id="btn-pictures" class="sub-btn active-category">Pictures</button>
+                <button id="btn-videos" class="sub-btn">Videos</button>
+                <button id="btn-extra" class="sub-btn">Extra</button>
+            </div>
+
+            <div class="dropdown-container">
+                <label for="tour-select" class="dropdown-label">Choose a Day:</label>
+                <select id="tour-select" class="tour-dropdown">
+                    <option value="none">-- Select a Tour --</option>
+                    <option value="kcon-2023-d1" selected>KCON LA 2023 D1</option>
+                    <option value="kcon-2023-d2">KCON LA 2023 D2</option>
+                    <option value="kcon-2025-d1">KCON LA 2025 D1</option>
+                    <option value="kcon-2025-d3">KCON LA 2025 D3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="box box-one">
+            <div class="media-viewer">
+                <div id="image-placeholder-text">Select a tour to view concert imagery</div>
+                <img id="concert-display-img" src="" alt="Concert Photo" style="display: none;">
+                <video id="concert-display-video" controls style="display: none; width: 100%; height: 100%; border-radius: 6px;"></video>
+            </div>
+
+            <div id="media-controls" class="media-controls-row" style="display: none;">
+                <button id="prev-media-btn" class="control-arrow">← Prev</button>
+                <span id="media-counter">1 / 1</span>
+                <button id="next-media-btn" class="control-arrow">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="concert-handler.js"></script>
+</body>
+</html>
