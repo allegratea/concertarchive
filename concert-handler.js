@@ -4,7 +4,7 @@
 const tourMediaDatabase = {
     "permission-to-dance": {
         yearPage: "2022.html",
-        pictures: ["images/bts.jpg","images/ptd1.jpg","images/bts.jpg"],
+        pictures: ["images/concert-display1.jpg","images/ptd1.jpg"],
         videos: [],
         extra: []
     },
